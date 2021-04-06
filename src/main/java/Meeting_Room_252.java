@@ -5,6 +5,7 @@ public class Meeting_Room_252 {
 
     }
 
+    // https://walkccc.me/LeetCode/problems/0252/
     public boolean canAttendMeetings(int[][] intervals) {
 
         Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
