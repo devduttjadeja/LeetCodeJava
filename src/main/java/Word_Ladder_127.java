@@ -23,13 +23,10 @@ public class Word_Ladder_127 {
             for (int i = 0; i < size; i++) {
 
                 String current = queue.poll();
-                char[] currentChars = current.toCharArray();
-
                 // "h i t"
-                for (int j = 0; j < currentChars.length; j++) {
+                for (int j = 0; j < current.length(); j++) {
 
-                    // save h temporarily
-                    char original = currentChars[j];
+                    char[] currentChars = current.toCharArray();
 
                     // "ait", "bit", "cit" etc
                     for (char c = 'a'; c <= 'z'; c++) {
@@ -50,10 +47,7 @@ public class Word_Ladder_127 {
                             queue.offer(newWord);
                             wordSet.remove(newWord);
                         }
-
                     }
-
-                    currentChars[j] = original;
 
                 }
             }
